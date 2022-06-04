@@ -57,7 +57,11 @@
             <td th:text="${product.title}"/>
             <td th:text="${product.price}"/>
             <td>
-                <a th:href="@{'/shop/cart/add/' + ${product.id}}" class="btn btn-primary" onclick="sendName()">Добавить в корзину</a>
+                <a th:href="@{'/shop/cart/add/' + ${product.id}}" class="btn btn-primary" onclick="sendName()"><img src='/cart.png'></a>
+                <!--                    Добавить в корзину</a>-->
+            </td>
+            <td>
+                <a th:href="@{'/products/edit/' + ${product.id}}" class="btn btn-primary" onclick="sendName()">Редактировать</a>
             </td>
         </tr>
         </tbody>
