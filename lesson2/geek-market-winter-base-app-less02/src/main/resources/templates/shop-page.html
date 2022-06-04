@@ -6,7 +6,12 @@
     <title>Каталог товаров</title>
     <link rel="icon" type="image/png" th:href="@{/static/favicon.ico}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
+    <!--STOMP-->
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <!--app.js dependance: jquery-->
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/script.js"></script>
 
 </head>
 
@@ -29,7 +34,9 @@
         <input th:value="${max != null} ? ${max}" th:name="max" type="number" placeholder="Максимальная цена">
         <button type="submit" class="btn btn-primary">Фильтровать</button>
     </form>
-
+    <tr>
+        <td th:text="${resultInput}"/>
+    </tr>
     <br>
 
     <h1 th:text="#{products.list}" />
